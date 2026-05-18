@@ -307,20 +307,13 @@
     .hero-inner {
       position: relative;
       z-index: 1;
-      display: grid;
-      grid-template-columns: 60% 40%;
-      gap: 0 52px;
-      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 52px;
       width: 100%;
       max-width: var(--max-w);
       margin: 0 auto;
       padding: calc(var(--nav-h) + 72px) 28px 96px;
-    }
-
-    .hero-left {
-      display: flex;
-      flex-direction: column;
-      gap: 48px;
     }
 
     /* Masthead — centered, newspaper front page */
@@ -1159,10 +1152,6 @@
       .nav-links, .nav-cta { display: none; }
       .nav-toggle { display: flex; }
 
-      .hero-inner { grid-template-columns: 1fr; gap: 32px 0; }
-      .hero-photo-col { order: -1; }
-      .hero-photo-wrap { height: 300px; max-height: 300px; border-left: 3px solid var(--gold); }
-
       .hero-body { grid-template-columns: 1fr; gap: 0; }
       .hero-col-rule, .hero-sidebar { display: none; }
 
@@ -1218,11 +1207,8 @@
 <section id="hero">
   <div class="hero-inner">
 
-    <!-- Left column: all hero content -->
-    <div class="hero-left">
-
-      <!-- Newspaper masthead — centered -->
-      <div class="hero-masthead fade-up">
+    <!-- Newspaper masthead — centered -->
+    <div class="hero-masthead fade-up">
         <p class="hero-kicker">Backing founders, decoding markets, building at the edge of AI and capital.</p>
         <h1 class="hero-name">Akshata Bailkeri</h1>
         <div class="hero-masthead-rule"></div>
@@ -1271,16 +1257,6 @@
           </div>
         </div>
       </div>
-
-    </div>
-
-    <!-- Right column: headshot -->
-    <div class="hero-photo-col fade-up delay-2">
-      <div class="hero-photo-wrap">
-        <img src="./akshata.jpg" alt="Akshata Bailkeri" class="hero-photo" />
-      </div>
-      <p class="hero-photo-caption">Akshata Bailkeri &nbsp;·&nbsp; New York, NY</p>
-    </div>
 
   </div>
 </section>
