@@ -258,10 +258,10 @@
       font-family: var(--font-body); font-size: 20px; color: var(--text-2);
       line-height: 1.9; margin-bottom: 32px; text-wrap: pretty;
     }
-    .drop-cap {
-      font-family: var(--font-serif); font-size: 4.2em; font-weight: 700;
-      color: var(--gold); float: left; line-height: 0.82;
-      margin-right: 5px; margin-top: 7px;
+    .hero-bio::first-letter {
+      font-family: var(--font-serif); font-size: 3.4em; font-weight: 700;
+      color: var(--gold); float: left; line-height: 0.86;
+      margin-right: 3px; margin-top: 6px;
     }
     .hero-ctas { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
     .hero-social { margin-top: 4px; }
@@ -618,6 +618,94 @@
     .footer-inner .social-icons a { color: var(--bg); }
     .footer-inner .social-icons a:hover { color: var(--gold); }
 
+    /* ── Newsletter essay card ─────────────────────────────────────── */
+    .article-card--essay { border-top: 1px solid var(--gold); }
+    .article-card--essay .article-tag { color: var(--gold); }
+    .article-card--essay-note {
+      font-family: var(--font-body); font-size: 12px; font-style: italic;
+      color: var(--text-3); margin-top: 4px; line-height: 1.6;
+    }
+
+    /* ── Research ───────────────────────────────────────────────────── */
+    #research { background: var(--bg); }
+    .research-header { margin-bottom: 48px; }
+    .research-subheading {
+      font-family: var(--font-sans); font-size: 10px; font-weight: 600;
+      letter-spacing: .22em; text-transform: uppercase; color: var(--text-3); margin-top: 8px;
+    }
+    .research-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1px; background: var(--border-dark); border: 1px solid var(--border-dark);
+      margin-bottom: 40px;
+    }
+    .research-card {
+      background: var(--bg); padding: 28px;
+      display: flex; flex-direction: column; gap: 14px; transition: background .25s;
+    }
+    .research-card:hover { background: var(--bg-2); }
+    .research-card-title {
+      font-family: var(--font-serif); font-size: 20px; font-weight: 700;
+      letter-spacing: -.01em; color: var(--text); line-height: 1.3;
+    }
+    .research-card-desc {
+      font-family: var(--font-body); font-size: 15px; color: var(--text-2);
+      line-height: 1.8; flex: 1;
+    }
+    .research-card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .research-card-link {
+      font-family: var(--font-sans); font-size: 10px; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase; color: var(--link);
+      display: inline-flex; align-items: center; gap: 5px;
+      margin-top: 8px; transition: color .2s;
+    }
+    .research-card-link:hover { color: var(--gold); }
+    .research-card-available {
+      font-family: var(--font-body); font-size: 13px; font-style: italic;
+      color: var(--gold); opacity: 0.75; margin-top: 8px;
+    }
+    .research-callout {
+      border-left: 3px solid var(--gold); padding: 16px 0 16px 28px;
+    }
+    .research-callout p {
+      font-family: var(--font-serif); font-size: 17px; font-style: italic;
+      color: var(--text-2); line-height: 1.6;
+    }
+    .research-callout a { color: var(--link); }
+    .research-callout a:hover { color: var(--gold); }
+
+    /* ── Side Quests ────────────────────────────────────────────────── */
+    #side-quests { background: var(--bg-2); }
+    .sq-header { margin-bottom: 16px; }
+    .sq-subheading {
+      font-family: var(--font-sans); font-size: 10px; font-weight: 600;
+      letter-spacing: .22em; text-transform: uppercase; color: var(--text-3); margin-top: 8px;
+    }
+    .sq-pull {
+      font-family: var(--font-serif); font-size: clamp(17px, 2vw, 21px);
+      font-style: italic; font-weight: 400; color: var(--text-2); line-height: 1.55;
+      margin-bottom: 48px; padding-left: 24px; border-left: 3px solid var(--gold);
+    }
+    .sq-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1px; background: var(--border-dark); border: 1px solid var(--border-dark);
+    }
+    .sq-card {
+      background: var(--bg); padding: 36px 28px;
+      display: flex; flex-direction: column; gap: 10px; transition: background .25s;
+    }
+    .sq-card:hover { background: var(--bg-2); }
+    .sq-icon {
+      font-size: 24px; color: var(--gold); line-height: 1; margin-bottom: 6px;
+      font-style: normal;
+    }
+    .sq-title {
+      font-family: var(--font-serif); font-size: 20px; font-weight: 700;
+      letter-spacing: -.01em; color: var(--text); line-height: 1.25;
+    }
+    .sq-desc {
+      font-family: var(--font-body); font-size: 16px; color: var(--text-2); line-height: 1.8;
+    }
+
     /* ── Responsive ────────────────────────────────────────────────── */
     @media (max-width: 900px) {
       .nav-links, .nav-cta { display: none; }
@@ -627,6 +715,10 @@
       .hero-col-rule, .hero-sidebar { display: none; }
       .exp-item, .edu-item { grid-template-columns: 1fr; gap: 10px; }
       .newsletter-inner { grid-template-columns: 1fr; gap: 48px; }
+    }
+
+    @media (max-width: 900px) {
+      .sq-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 600px) {
@@ -660,10 +752,11 @@
       <a href="#hero" class="nav-logo">Akshata Bailkeri<span>.</span></a>
       <ul class="nav-links">
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
+        <li><a href="#research">Research</a></li>
         <li><a href="#media">Media</a></li>
         <li><a href="#newsletter">Newsletter</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#side-quests">Side Quests</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#contact" class="nav-cta">Get in Touch</a>
@@ -676,10 +769,11 @@
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="#experience" class="mobile-link">Experience</a>
-  <a href="#education" class="mobile-link">Education</a>
+  <a href="#research" class="mobile-link">Research</a>
   <a href="#media" class="mobile-link">Media</a>
   <a href="#newsletter" class="mobile-link">Newsletter</a>
   <a href="#projects" class="mobile-link">Projects</a>
+  <a href="#side-quests" class="mobile-link">Side Quests</a>
   <a href="#contact" class="mobile-link">Contact</a>
 </div>
 
@@ -703,7 +797,7 @@
           New York, NY
         </p>
         <p class="hero-dateline fade-up delay-1">New York —</p>
-        <p class="hero-bio fade-up delay-1"><span class="drop-cap">E</span>ight years across equity capital markets, public equities, private market secondaries, and early-stage venture — from Credit Suisse to EquityZen to Alumni Ventures. Now at MIT Sloan, building at the intersection of markets and technology.</p>
+        <p class="hero-bio fade-up delay-1">Eight years across equity capital markets, public equities, private market secondaries, and early-stage venture — from Credit Suisse to EquityZen to Alumni Ventures. Now at MIT Sloan, building at the intersection of markets and technology.</p>
         <div class="hero-ctas fade-up delay-2">
           <a href="https://www.linkedin.com/in/akshatabailkeri" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn</a>
           <a href="https://crackingthecapitalcode.substack.com" target="_blank" rel="noopener" class="btn btn-outline">Newsletter</a>
@@ -887,6 +981,64 @@
 
 <div class="divider"></div>
 
+<!-- ── Research & Analysis ─────────────────────────────────────────── -->
+<section id="research">
+  <div class="container">
+    <div class="research-header">
+      <p class="section-label fade-up">Work Product</p>
+      <h2 class="section-title fade-up delay-1"><span class="section-prefix">—</span>Research &amp; Analysis</h2>
+      <div class="section-rule fade-up delay-1"></div>
+      <p class="research-subheading fade-up delay-2">Selected Research, Indices, and Market Analysis</p>
+    </div>
+
+    <div class="research-grid">
+
+      <div class="research-card fade-up">
+        <p class="research-card-title">EquityZen Private Markets Index</p>
+        <p class="research-card-desc">Contributed core research and methodology to EquityZen's proprietary private markets index, tracking valuation trends across late-stage private companies. Designed the underlying pricing algorithm that improved valuation accuracy by 35%.</p>
+        <div class="research-card-tags">
+          <span class="tag">Private Markets</span>
+          <span class="tag">Secondaries</span>
+          <span class="tag">Valuation</span>
+        </div>
+        <a href="https://www.yahooinc.com/press/yahoo-finance-launches-industry-first-feature-private-company-insights-in-partnership-with-equityzen-and-forge-global" target="_blank" rel="noopener" class="research-card-link">
+          View Yahoo Finance Partnership
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card fade-up delay-1">
+        <p class="research-card-title">Thematic Research — Pandemic Market Impacts</p>
+        <p class="research-card-desc">Sector-level analysis on investment implications of COVID-19 across technology, healthcare, and industrial sectors. Informed portfolio positioning at Bruderman Asset Management.</p>
+        <div class="research-card-tags">
+          <span class="tag">Public Equities</span>
+          <span class="tag">Thematic Research</span>
+          <span class="tag">Healthcare</span>
+        </div>
+        <p class="research-card-available">Available on request</p>
+      </div>
+
+      <div class="research-card fade-up delay-2">
+        <p class="research-card-title">Pharmaceutical Sector Valuation Analysis</p>
+        <p class="research-card-desc">Deep-dive valuation research on pharmaceutical companies covering pipeline risk, patent cliffs, and pricing dynamics. Used to guide investment decisions across healthcare portfolio.</p>
+        <div class="research-card-tags">
+          <span class="tag">Healthcare</span>
+          <span class="tag">Valuation</span>
+          <span class="tag">Public Markets</span>
+        </div>
+        <p class="research-card-available">Available on request</p>
+      </div>
+
+    </div>
+
+    <div class="research-callout fade-up">
+      <p>For AI-native tools and financial models built with Claude and Python, see the <a href="#projects">Projects section →</a></p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- ── Media ────────────────────────────────────────────────────────── -->
 <section id="media">
   <div class="container">
@@ -1059,6 +1211,12 @@
             <p class="article-title">Cracking the Capital Code: Founder Series</p>
             <p class="article-excerpt">Conversations with founders and investors on fundraising, product-market fit, and building for the long term.</p>
           </a>
+          <div class="article-card article-card--essay">
+            <p class="article-tag">Essay · Philosophy · Writing</p>
+            <p class="article-title" style="font-style:italic;">Mind of My Own</p>
+            <p class="article-excerpt">A philosophical essay exploring independent thinking, conviction, and decision-making under uncertainty — themes that run through both investing and life.</p>
+            <p class="article-card--essay-note">Full text available — reach out to request a copy.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1137,6 +1295,56 @@
             GitHub
           </a>
         </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── Side Quests ─────────────────────────────────────────────────── -->
+<section id="side-quests">
+  <div class="container">
+    <div class="sq-header">
+      <p class="section-label fade-up">Beyond the Portfolio</p>
+      <h2 class="section-title fade-up delay-1"><span class="section-prefix">—</span>Side Quests</h2>
+      <div class="section-rule fade-up delay-1"></div>
+      <p class="sq-subheading fade-up delay-2">Beyond the Portfolio</p>
+    </div>
+
+    <p class="sq-pull fade-up delay-2">"The best investors I know are also the most curious people I know."</p>
+
+    <div class="sq-grid">
+
+      <div class="sq-card fade-up">
+        <span class="sq-icon">▲</span>
+        <p class="sq-title">Summit: Kilimanjaro</p>
+        <p class="sq-desc">Summited Mount Kilimanjaro in March 2026. The highest peak in Africa and one of the seven summits — a reminder that the most important decisions happen when you're exhausted and still have to keep moving.</p>
+      </div>
+
+      <div class="sq-card fade-up delay-1">
+        <span class="sq-icon">◎</span>
+        <p class="sq-title">Six Continents &amp; Counting</p>
+        <p class="sq-desc">Will have set foot on six of seven continents by end of 2026. Antarctica remains — for now. Study abroad in Copenhagen and Melbourne was the beginning; the habit never stopped.</p>
+      </div>
+
+      <div class="sq-card fade-up delay-2">
+        <span class="sq-icon">◈</span>
+        <p class="sq-title">Training: Half Marathon</p>
+        <p class="sq-desc">Currently in training. Running is the one activity where the only competitor is yesterday's version of yourself.</p>
+      </div>
+
+      <div class="sq-card fade-up delay-3">
+        <span class="sq-icon">❧</span>
+        <p class="sq-title">French Literature</p>
+        <p class="sq-desc">Molière for the comedy of human ambition. Sartre for the weight of radical freedom. Between the two, most of investing is covered.</p>
+      </div>
+
+      <div class="sq-card fade-up delay-1">
+        <span class="sq-icon">⬡</span>
+        <p class="sq-title">Woodworking</p>
+        <p class="sq-desc">There is something clarifying about making something with your hands that either works or doesn't. No ambiguity, no narrative — just craft.</p>
       </div>
 
     </div>
