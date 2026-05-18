@@ -215,8 +215,9 @@
       margin-bottom: 40px;
     }
     .hero-kicker {
-      font-family: var(--font-sans); font-size: 11px; font-weight: 500;
-      letter-spacing: .22em; text-transform: uppercase; color: var(--text-3); margin-bottom: 22px;
+      font-family: var(--font-serif); font-size: clamp(15px, 1.8vw, 19px);
+      font-style: italic; font-weight: 400; color: var(--text-2);
+      letter-spacing: .01em; line-height: 1.5; margin-bottom: 22px;
     }
     .hero-name {
       font-family: var(--font-serif);
@@ -231,7 +232,7 @@
     }
 
     /* Two-column newspaper body */
-    .hero-body { display: grid; grid-template-columns: 1fr 1px 280px; gap: 0 52px; align-items: start; margin-bottom: 48px; }
+    .hero-body { display: grid; grid-template-columns: 1fr 1px 280px; gap: 0 52px; align-items: start; margin-bottom: 72px; }
 
     .hero-location {
       display: flex; align-items: center; gap: 5px;
@@ -241,9 +242,9 @@
     .hero-location svg { opacity: .45; flex-shrink: 0; }
 
     .hero-dateline {
-      font-family: var(--font-sans); font-size: 11px; font-weight: 700;
-      letter-spacing: .16em; text-transform: uppercase; color: var(--text);
-      margin-bottom: 2px; display: inline;
+      font-family: var(--font-sans); font-size: 11px; font-weight: 500;
+      letter-spacing: .2em; text-transform: uppercase; color: #666666;
+      margin-bottom: 12px; display: block;
     }
 
     .hero-bio {
@@ -268,13 +269,13 @@
       letter-spacing: .22em; text-transform: uppercase; color: var(--text-3);
       margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border-dark);
     }
-    .hero-credential-wrap { position: relative; height: 30px; overflow: visible; }
+    .hero-credential-wrap { position: relative; min-height: 64px; }
     .credential-line {
-      position: absolute; top: 0; left: 0;
-      font-family: var(--font-body); font-size: 15px; font-style: italic;
+      position: absolute; top: 0; left: 0; right: 0;
+      font-family: var(--font-body); font-size: 14px; font-style: italic;
       color: var(--text-2); opacity: 0; transform: translateY(6px);
       transition: opacity .7s ease, transform .7s ease;
-      white-space: normal; line-height: 1.65;
+      white-space: normal; line-height: 1.75;
     }
     .credential-line.active { opacity: 1; transform: translateY(0); }
 
@@ -675,7 +676,8 @@
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           New York, NY
         </p>
-        <p class="hero-bio fade-up delay-1"><span class="hero-dateline">New York —</span> <span class="drop-cap">E</span>ight years across equity capital markets, public equities, private market secondaries, and early-stage venture — from Credit Suisse to EquityZen to Alumni Ventures. Now at MIT Sloan, building at the intersection of markets and technology.</p>
+        <p class="hero-dateline fade-up delay-1">New York —</p>
+        <p class="hero-bio fade-up delay-1"><span class="drop-cap">E</span>ight years across equity capital markets, public equities, private market secondaries, and early-stage venture — from Credit Suisse to EquityZen to Alumni Ventures. Now at MIT Sloan, building at the intersection of markets and technology.</p>
         <div class="hero-ctas fade-up delay-2">
           <a href="https://www.linkedin.com/in/akshatabailkeri" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn</a>
           <a href="https://crackingthecapitalcode.substack.com" target="_blank" rel="noopener" class="btn btn-outline">Newsletter</a>
@@ -703,8 +705,9 @@
         <div class="hero-credential-wrap">
           <span class="credential-line active">MIT Sloan MBA · Class of 2027</span>
           <span class="credential-line">Featured on CNBC, Bloomberg, Yahoo Finance</span>
-          <span class="credential-line">Alumni Ventures — $1B+ AUM</span>
-          <span class="credential-line">Co-President, VCPE + AI/ML Clubs</span>
+          <span class="credential-line">Alumni Ventures · Growth Equity &amp; Venture</span>
+          <span class="credential-line">8+ Years · Public &amp; Private Markets</span>
+          <span class="credential-line">Series 7 · Series 24 · Laconia Venture Fellow</span>
         </div>
       </div>
     </div>
